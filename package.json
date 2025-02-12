@@ -1,0 +1,22 @@
+{
+  "name": "my-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "concurrently \"npm run start:dev --workspace=bless\" \"npm run start:dev --workspace=the-strongest\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "private": true,
+  "workspaces": [
+    "packages/frontends/*",
+    "packages/backends/*",
+    "packages/shared"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
